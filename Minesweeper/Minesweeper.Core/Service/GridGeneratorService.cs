@@ -1,6 +1,6 @@
 ﻿using System;
 using Minesweeper.Core.Interfaces;
-using Minesweeper.Core.Models;
+using Minesweeper.Models;
 
 namespace Minesweeper.Core.Service
 {
@@ -12,7 +12,7 @@ namespace Minesweeper.Core.Service
         // Number of mines places
         public const int MINECOUNT = 12;
 
-        // delcare 2D array of cell //TODO: Sort this accesability out 
+        // delcare 2D array of cell
         public Cell[,] Grid { get; private set; }
 
         public void GenerateGrid()

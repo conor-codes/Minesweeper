@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Minesweeper.Core.Models
+namespace Minesweeper.Models
 {
     public class Cell
     {

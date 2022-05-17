@@ -21,6 +21,7 @@ public class Program
                             .AddTransient<IGridGeneratorService, GridGeneratorService>()
                             .AddTransient<IConsoleDisplayService, ConsoleDisplayService>()
                             .AddTransient<ICollisionDetectorService, CollisionDetectionService>()
-                            .AddTransient<IPlayerNavigationService, PlayerNavigationService>());
+                            .AddTransient<IPlayerNavigationService, PlayerNavigationService>()
+                            .AddTransient<IGameStateService, GameStateService>());
 
 }

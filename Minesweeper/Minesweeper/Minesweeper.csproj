@@ -7,10 +7,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Minesweeper.Core\Minesweeper.Core.csproj" />
+    <ProjectReference Include="..\Minesweeper.Models\Minesweeper.Models.csproj" />
+    <ProjectReference Include="..\Minesweeper.Test\Minesweeper.Test.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Microsoft.Extensions.DependencyInjection" />
     <None Remove="Microsoft.Extensions.Hosting" />
+    <None Remove="Microsoft.NET.Test.Sdk" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />

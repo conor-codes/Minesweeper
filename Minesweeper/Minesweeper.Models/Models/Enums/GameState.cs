@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Minesweeper.Core.Models.Enums
+namespace Minesweeper.Models.Enums
 {
     public enum GameState
     {

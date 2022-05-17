@@ -1,5 +1,6 @@
 ﻿using System;
 using Minesweeper.Core.Interfaces;
+using Minesweeper.Models;
 
 namespace Minesweeper.Core.Service
 {
@@ -9,15 +10,27 @@ namespace Minesweeper.Core.Service
         {
         }
 
+        public void DisplayMessage(string input)
+        {
+            Console.WriteLine(input);
+        }
+
         public string ConvertPosToAlphabet(int number)
         {
             string[] alphabetArray = { "A", "B", "C", "D", "E", "F", "G", "H" };
             return alphabetArray.GetValue(number) as string;
         }
 
-        public void DisplayMessage(string input)
+        public void DisplayLandedOnMineMessage(Player player)
         {
-            Console.WriteLine(input);
+            string lifeFormat = player.Lives == 1 ? "life" : "lives";
+            DisplayMessage($"Oops, you landed on a mine! You have {player.Lives} {lifeFormat} remaining");
+        }
+
+        public void DisplayPlayerMovedMessage(Player player)
+        {
+            DisplayMessage($"Player moved to: {ConvertPosToAlphabet(player.CurrentPosition.xPosition)}" +
+               $", { player.CurrentPosition.yPosition + 1} Lives: {player.Lives} Moves: {player.Moves}");
         }
     }
 }

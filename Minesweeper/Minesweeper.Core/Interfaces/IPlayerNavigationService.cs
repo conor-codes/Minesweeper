@@ -1,6 +1,6 @@
 ﻿using System;
-using Minesweeper.Core.Models;
-using Minesweeper.Core.Models.Enums;
+using Minesweeper.Models;
+using Minesweeper.Models.Enums;
 
 namespace Minesweeper.Core.Interfaces
 {

@@ -1,5 +1,5 @@
 ﻿using System;
-using Minesweeper.Core.Models;
+using Minesweeper.Models;
 
 namespace Minesweeper.Core.Interfaces
 {

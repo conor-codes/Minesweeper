@@ -1,6 +1,6 @@
 ﻿using System;
 using Minesweeper.Core.Interfaces;
-using Minesweeper.Core.Models;
+using Minesweeper.Models;
 
 namespace Minesweeper.Core.Service
 {
@@ -10,7 +10,13 @@ namespace Minesweeper.Core.Service
         {
         }
 
-        //Todo: This isn't working as expected, the reference is set wrong
+        public bool DetectIfPlayerLandsOnMine(Player player, Cell[,] grid)
+        {
+            var cell = grid.GetValue(player.CurrentPosition.xPosition, player.CurrentPosition.yPosition) as Cell;
+            return cell.HasMine;
+        }
+
+        //Todo: This isn't working as expected (Not implemented).
         public bool DetectIfPlayerIsCloseToAMine(Player player, Cell[,] grid)
         {
             var cell = grid.GetValue(player.CurrentPosition.xPosition, player.CurrentPosition.yPosition) as Cell;
@@ -24,9 +30,9 @@ namespace Minesweeper.Core.Service
                 switch (i)
                 {
                     case 1:
-                        tempCell.xPosition--;                            
+                        tempCell.xPosition--;
                         break;
-                        
+
                     case 2:
                         tempCell.xPosition++;
                         break;
@@ -50,12 +56,6 @@ namespace Minesweeper.Core.Service
                     return mineClose;
             }
             return mineClose;
-        }
-
-        public bool DetectIfPlayerLandsOnMine(Player player, Cell[,] grid)
-        {
-            var cell = grid.GetValue(player.CurrentPosition.xPosition, player.CurrentPosition.yPosition) as Cell;
-            return cell.HasMine;
         }
     }
 }

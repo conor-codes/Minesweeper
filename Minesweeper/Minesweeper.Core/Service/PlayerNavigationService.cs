@@ -2,26 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using Minesweeper.Core.Interfaces;
-using Minesweeper.Core.Models;
-using Minesweeper.Core.Models.Enums;
+using Minesweeper.Models;
+using Minesweeper.Models.Enums;
 
 namespace Minesweeper.Core.Service
 {
     public class PlayerNavigationService : IPlayerNavigationService
     {
-        private List<ConsoleKey> allowedKeyPresses; 
-
-        public PlayerNavigationService()
-        {
-            allowedKeyPresses = new List<ConsoleKey>()
-            {
-                ConsoleKey.UpArrow,
-                ConsoleKey.DownArrow,
-                ConsoleKey.LeftArrow,
-                ConsoleKey.RightArrow
-            };
-        }
-
         public bool MovePlayer(ref Player player, Cell[,] grid, PlayerDirection move)
         {
             // Create a new instance so we don't directly edit the ref unless needed.

@@ -1,7 +1,7 @@
 ﻿using System;
-using Minesweeper.Core.Models.Enums;
+using Minesweeper.Models.Enums;
 
-namespace Minesweeper.Core.Models
+namespace Minesweeper.Models
 {
     public class Player
     {
